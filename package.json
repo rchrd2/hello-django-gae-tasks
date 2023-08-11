@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "deploy": "yes | gcloud app deploy --project hello-tasks-395419",
+    "browse": "gcloud app browse --project hello-tasks-395419",
+    "dev": "python manage.py runserver",
+    "logs": "gcloud app logs tail -s default --project hello-tasks-395419",
+    "serve": "npm run dev",
+    "update_requirements": "pipenv requirements > requirements.txt"
+  }
+}
