@@ -22,7 +22,7 @@ def create_task(project=None, queue=None, location=None, payload=None, in_second
 
     task = {
         "app_engine_http_request": {
-            "http_method": tasks_v2.HttpMethod.POST,
+            "http_method": 'POST',
             "relative_uri": reverse("example_task_handler"),
         }
     }
@@ -62,7 +62,6 @@ class ExampleTaskHandlerView(View):
         payload = request.body
         print(f"Received task with payload: {payload}")
         return HttpResponse('Task created')
-
 
 
 urlpatterns = [
